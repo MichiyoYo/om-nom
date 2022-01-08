@@ -1,16 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../utils/devices";
 
 const SideBarWrap = styled.div`
   min-height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    #051937,
-    #004d7a,
-    #008793,
-    #00bf72,
-    #a8eb12
-  );
+  background-color: #041b3a59;
 `;
 
 const SideBar = () => {
