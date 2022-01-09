@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import loadingSVG from "../../loading.svg";
+import { AppContext } from "../../App";
 
 const ContentWrap = styled.main`
   flex: 5;
@@ -9,7 +11,17 @@ const ContentWrap = styled.main`
 `;
 
 function Content(props) {
-  return <ContentWrap>This is the content</ContentWrap>;
+  const { data, loading } = useContext(AppContext);
+
+  return (
+    <ContentWrap>
+      {loading ? (
+        <img src={loadingSVG} width="80" height="80" alt="loading gif" />
+      ) : (
+        <p>this is the content</p>
+      )}
+    </ContentWrap>
+  );
 }
 
 export default Content;
