@@ -26,10 +26,11 @@ export const AppContext = createContext();
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=italian&apiKey=${API_KEY}`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=italian&addRecipeInformation=true&apiKey=${API_KEY}`
     )
       .then((response) => {
         if (response.ok) return response.json();
@@ -39,7 +40,7 @@ function App() {
         setData(data.results);
       })
       .catch((err) => {
-        console.error(`There was an error while fetching recipes: ${err}`);
+        setError(`There was an error while fetching recipes: ${err}`);
       })
       .finally(() => {
         setLoading(false);
@@ -47,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <AppContext.Provider value={{ data, loading }}>
+    <AppContext.Provider value={{ data, loading, error }}>
       <AppContainer className="App">
         <SplitScreen leftWeight={1} rightWeight={5}>
           <SideBar />
