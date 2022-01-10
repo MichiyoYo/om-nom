@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const HeaderWrap = styled.header`
   flex: 1;
+  height: 80px;
   max-height: 80px;
   display: flex;
   justify-content: center;

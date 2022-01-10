@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const FooterWrap = styled.footer`
   flex: 1;
-  max-height: 100px;
+  height: 80px;
+  max-height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

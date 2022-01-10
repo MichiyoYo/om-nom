@@ -8,19 +8,21 @@ import LargeRecipeListItem from "../recipes/LargeRecipeListItem";
 import SearchField from "../SearchField";
 
 const ContentWrap = styled.main`
-  flex: 5;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
 `;
 
 const RecipeContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
-  max-height: auto;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  max-height: 800px;
+  padding: 40px;
 `;
 
 function Content(props) {
