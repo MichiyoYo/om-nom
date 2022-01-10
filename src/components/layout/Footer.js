@@ -7,6 +7,7 @@ const FooterWrap = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #041b3a59;
 `;
 
 function Footer(props) {

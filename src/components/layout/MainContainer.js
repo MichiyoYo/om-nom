@@ -8,7 +8,7 @@ const MainContainerWrap = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 const MainContainer = () => {
